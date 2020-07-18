@@ -1,0 +1,93 @@
+* {
+  font-family: Roboto;
+  text-decoration: none;
+}
+.card {
+  justify-content: center;
+  text-align: center;
+  background: #f4f5f8;
+  border: 1px solid #e3e5ee;
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 40%;
+}
+.header {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  align-self: center;
+  color: #343232;
+}
+.second-header {
+  color: #343232;
+  font-size: 18px;
+  font-weight: normal;
+}
+.header-info {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 26px;
+  color: #727272;
+}
+.input-filed {
+  width: 20em;
+  display: inline-grid;
+  height: 20%;
+}
+input::placeholder {
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #676767;
+}
+.input-box {
+  height: 25px;
+  margin: 15px;
+  width: 50%;
+}
+
+.login-bttn {
+  display: block;
+  margin: 30px auto;
+  border-width: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #506bfa;
+  color: #ecf0f1;
+  height: 3em;
+  width: 6em;
+  transition: background-color 0.3s;
+  font-size: 15px;
+}
+.create-account-bttn {
+  display: block;
+  margin: 30px auto;
+  padding: 0;
+  border-width: 0;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #211f1f;
+  color: #ecf0f1;
+  height: 3em;
+  width: 10em;
+  transition: background-color 0.3s;
+}
+.line-div {
+  display: 'flex';
+  justify-content: center;
+}
+.line {
+  width: 60%;
+  border: 1px solid #d2d2d2;
+}
+@media only screen and (min-device-width: 360px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+  .card {
+    left: 9%;
+    top: 8%;
+    width: 81%;
+  }
+}
