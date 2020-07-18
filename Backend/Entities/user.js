@@ -26,7 +26,6 @@ const User = sequelize.define('User', {
   password: {
       type: DataTypes.STRING,
       allowNull: false
-
   },
   country: {
       type: DataTypes.STRING
@@ -40,11 +39,6 @@ const User = sequelize.define('User', {
 }, {
   // Other model options go here
 });
-
-(async () => {
-    await sequelize.sync({ force: true });
-    const jane = User.create({firstName: "Jane", lastName: 'Doe', password: '1234', email: 'janeDoe@gmail.com' });
-  })();
 
 
  export default User
