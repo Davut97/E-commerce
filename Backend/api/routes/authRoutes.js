@@ -4,6 +4,8 @@ export default (app) => {
 	/**
 	 * params: {email, password}
 	 * returns an auto assigned cookie and 200 status
+	 * if auth fails (No User with email, or password wrong) returns 401
+	 * if bad request is sent, 400 is returned
 	 */
 	app.post("/login", passport.authenticate("local"), function (req, res) {
 		console.log(`Login Successful? ${req.user}`);
@@ -11,8 +13,9 @@ export default (app) => {
 	});
 	/**
 	 * Deletes the cookie assigned to user and redirects to homepage
+	 * if no user is signed in returns 401
 	 */
-	app.get("/logout", (req, res) => {
+	app.get("/logout", requireLogin, (req, res) => {
 		req.logout();
 		res.redirect("/");
 	});
